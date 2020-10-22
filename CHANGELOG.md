@@ -4,6 +4,41 @@
 
 [1]: https://pypi.org/project/google-api-core/#history
 
+## [1.18.0](https://www.github.com/software-dov/python-api-core/compare/v1.17.0...v1.18.0) (2020-10-22)
+
+
+### Features
+
+* **api-core:** pass retry from result() to done() ([#9](https://www.github.com/software-dov/python-api-core/issues/9)) ([6623b31](https://www.github.com/software-dov/python-api-core/commit/6623b31a2040b834be808d711fa397dc428f1837))
+* [CBT-6 helper] Exposing Retry._deadline as a property ([#20](https://www.github.com/software-dov/python-api-core/issues/20)) ([7be1e59](https://www.github.com/software-dov/python-api-core/commit/7be1e59e9d75c112f346d2b76dce3dd60e3584a1))
+* add client_encryped_cert_source to ClientOptions ([#31](https://www.github.com/software-dov/python-api-core/issues/31)) ([e4eaec0](https://www.github.com/software-dov/python-api-core/commit/e4eaec0ff255114138d3715280f86d34d861a6fa))
+* allow credentials files to be passed for channel creation ([#50](https://www.github.com/software-dov/python-api-core/issues/50)) ([ded92d0](https://www.github.com/software-dov/python-api-core/commit/ded92d0acdcde4295d0e5df05fda0d83783a3991))
+* allow disabling response stream pre-fetch ([#30](https://www.github.com/software-dov/python-api-core/issues/30)) ([74e0b0f](https://www.github.com/software-dov/python-api-core/commit/74e0b0f8387207933c120af15b2bb5d175dd8f84)), closes [#25](https://www.github.com/software-dov/python-api-core/issues/25)
+* allow quota project to be passed to create_channel ([#58](https://www.github.com/software-dov/python-api-core/issues/58)) ([e2d9a7b](https://www.github.com/software-dov/python-api-core/commit/e2d9a7b209b7dfab300dc848fabbae8f42a2ab19))
+* **client_options:** add new client options 'quota_project_id', 'scopes', and 'credentials_file' ([a582936](https://www.github.com/software-dov/python-api-core/commit/a58293601d6da90c499d404e634a979a6cae9708))
+* AsyncIO Integration [Part 2] ([#28](https://www.github.com/software-dov/python-api-core/issues/28)) ([dd9b2f3](https://www.github.com/software-dov/python-api-core/commit/dd9b2f38a70e85952cc05552ec8070cdf29ddbb4)), closes [#23](https://www.github.com/software-dov/python-api-core/issues/23)
+* First batch of AIO integration ([#26](https://www.github.com/software-dov/python-api-core/issues/26)) ([a82f289](https://www.github.com/software-dov/python-api-core/commit/a82f2892b8f219b82e120e6ed9f4070869c28be7))
+* third batch of AsyncIO integration ([#29](https://www.github.com/software-dov/python-api-core/issues/29)) ([7d8d580](https://www.github.com/software-dov/python-api-core/commit/7d8d58075a92e93662747d36a2d55b5e9f0943e1))
+
+
+### Bug Fixes
+
+*  map LRO errors to library exception types ([#86](https://www.github.com/software-dov/python-api-core/issues/86)) ([a855339](https://www.github.com/software-dov/python-api-core/commit/a85533903c57be4809fe76435e298409e0903931)), closes [#15](https://www.github.com/software-dov/python-api-core/issues/15)
+* _determine_timeout problem handling float type timeout ([#64](https://www.github.com/software-dov/python-api-core/issues/64)) ([2010373](https://www.github.com/software-dov/python-api-core/commit/2010373b27536d1191175624b297a709d70153fa))
+* bump up grpcio minimum version to 1.29.0 ([#41](https://www.github.com/software-dov/python-api-core/issues/41)) ([4b11422](https://www.github.com/software-dov/python-api-core/commit/4b114221b3ae01eee540bedf47381c3b7c214b0c))
+* harden install to use full paths, and windows separators on windows ([#88](https://www.github.com/software-dov/python-api-core/issues/88)) ([db8e636](https://www.github.com/software-dov/python-api-core/commit/db8e636f545a8872f959e3f403cfec30ffed6c34))
+* only add quota project id if supported ([#75](https://www.github.com/software-dov/python-api-core/issues/75)) ([8f8ee78](https://www.github.com/software-dov/python-api-core/commit/8f8ee7879e4f834f3c676e535ffc41b5b9b2de62))
+* update out-of-date comment in exceptions.py ([#93](https://www.github.com/software-dov/python-api-core/issues/93)) ([70ebe42](https://www.github.com/software-dov/python-api-core/commit/70ebe42601b3d088b3421233ef7d8245229b7265))
+* use version.py instead of pkg_resources.get_distribution ([#80](https://www.github.com/software-dov/python-api-core/issues/80)) ([d480d97](https://www.github.com/software-dov/python-api-core/commit/d480d97e41cd6705325b3b649360553a83c23f47))
+* **dependencies:** increase protobuf version ([#49](https://www.github.com/software-dov/python-api-core/issues/49)) ([1ba6095](https://www.github.com/software-dov/python-api-core/commit/1ba609592968c9d828449b89a3ade3bcaf5edd7f)), closes [#48](https://www.github.com/software-dov/python-api-core/issues/48)
+* **deps:** require six >= 1.13.0 ([#78](https://www.github.com/software-dov/python-api-core/issues/78)) ([a7a8b98](https://www.github.com/software-dov/python-api-core/commit/a7a8b98602a3eb277fdc607ac69f3bcb147f3351)), closes [/github.com/benjaminp/six/blob/c0be8815d13df45b6ae471c4c436cce8c192245d/CHANGES#L30-L31](https://www.github.com/software-dov//github.com/benjaminp/six/blob/c0be8815d13df45b6ae471c4c436cce8c192245d/CHANGES/issues/L30-L31)
+
+
+### Documentation
+
+* change the documentation for using 'six.moves.collections_abc.Mapping' instead of 'dict' in 'client_options.from_dict()' ([#53](https://www.github.com/software-dov/python-api-core/issues/53)) ([c890675](https://www.github.com/software-dov/python-api-core/commit/c890675dc9ebc084f105be81dc81c048f4f599ea))
+* fix spelling errors for amount in retry ([#69](https://www.github.com/software-dov/python-api-core/issues/69)) ([7bb713d](https://www.github.com/software-dov/python-api-core/commit/7bb713d13b1fe3cca58263f5e499136a84abc456))
+
 ## [1.23.0](https://www.github.com/googleapis/python-api-core/compare/v1.22.4...v1.23.0) (2020-10-16)
 
 
